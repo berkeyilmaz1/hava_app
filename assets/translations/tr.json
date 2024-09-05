@@ -1,0 +1,25 @@
+{
+    "app":{
+        "celcius": "{} °C",
+        "percentage": "{} %"
+    },
+    "weather": {
+        "title": "Hava Durumu",
+        "description": "Şehrinizdeki Hava Durumu",
+        "city": "Şehir"
+    },
+    "information": {
+        "temp": "Sıcaklık",
+        "feelsLike": "Hissedilen",
+        "humidity": "Nem"
+    },
+    "wind": {
+        "speed": "Hız",
+        "degrees": "Derece",
+        "Gust": "Rüzgar Poyrazı"
+    },
+    "sunEvents": {
+        "sunrise": "Gün Doğumu",
+        "sunset": "Gün Batımı"
+    }
+}

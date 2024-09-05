@@ -1,0 +1,25 @@
+{
+    "app":{
+        "celcius": "{} °C",
+        "percentage": "{} %"
+    },
+    "weather":{
+        "title": "Weather",
+        "description": "Weather in your city",
+        "city": "City"
+    },
+    "information":{
+        "temp": "Temperature",
+        "feelsLike": "Feels like",
+        "humidity": "Humidity"
+    },
+    "wind":{
+        "speed":"Speed",
+        "degrees":"Degrees",
+        "Gust":"Gust"
+    },
+    "sunEvents":{
+        "sunrise":"Sunrise",
+        "sunset":"Sunset"
+    }
+}
