@@ -3,6 +3,9 @@
 abstract class  LocaleKeys {
   static const app_celcius = 'app.celcius';
   static const app_percentage = 'app.percentage';
+  static const app_informations = 'app.informations';
+  static const app_wind = 'app.wind';
+  static const app_sunEvents = 'app.sunEvents';
   static const app = 'app';
   static const weather_title = 'weather.title';
   static const weather_description = 'weather.description';

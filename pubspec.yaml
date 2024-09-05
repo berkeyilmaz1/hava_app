@@ -31,3 +31,8 @@ flutter:
   assets:
     - assets/lotties/
     - assets/translations/
+
+  fonts:
+    - family: NunitoSans
+      fonts:
+        - asset: assets/fonts/NunitoSans_10pt-Bold.ttf

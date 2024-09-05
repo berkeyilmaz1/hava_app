@@ -1,7 +1,10 @@
 {
     "app":{
         "celcius": "{} °C",
-        "percentage": "{} %"
+        "percentage": "{} %",
+        "informations": "Informations",
+        "wind":"Wind",
+        "sunEvents":"Sun Events"
     },
     "weather":{
         "title": "Weather",

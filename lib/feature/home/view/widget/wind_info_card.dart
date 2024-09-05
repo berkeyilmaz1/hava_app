@@ -6,34 +6,44 @@ final class WindInfoCard extends StatelessWidget {
   final WeatherModel? currentWeather;
   @override
   Widget build(BuildContext context) {
-    if (currentWeather == null || currentWeather!.main == null) {
+    if (currentWeather == null || currentWeather?.main == null) {
       return Center(
         child: LottieBuilder.asset(LottieConstants.loading),
       );
     }
-    return Padding(
-      padding: const PagePadding.all(),
-      child: Card(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            InformationCard(
-              currentWeather: currentWeather,
-              description: LocaleKeys.wind_degrees.tr(),
-              info: currentWeather!.wind!.deg.toString(),
+    return InfoGradientContainer(
+      child: Column(
+        children: [
+          Padding(
+            padding: const PagePadding.allVeryLow(),
+            child: Text(
+              LocaleKeys.app_wind.tr(),
+              style: TextStyles.textStyleM,
             ),
-            InformationCard(
-              currentWeather: currentWeather,
-              description: LocaleKeys.wind_speed.tr(),
-              info: currentWeather!.wind!.speed.toString(),
-            ),
-            InformationCard(
-              currentWeather: currentWeather,
-              description: LocaleKeys.wind_Gust.tr(),
-              info: currentWeather!.wind!.gust.toString(),
-            ),
-          ],
-        ),
+          ),
+          const Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              InformationCard(
+                currentWeather: currentWeather,
+                description: LocaleKeys.wind_degrees.tr(),
+                info: currentWeather?.wind?.deg.toString() ?? '',
+              ),
+              InformationCard(
+                currentWeather: currentWeather,
+                description: LocaleKeys.wind_speed.tr(),
+                info: currentWeather?.wind?.speed.toString() ?? '',
+              ),
+              InformationCard(
+                currentWeather: currentWeather,
+                description: LocaleKeys.wind_Gust.tr(),
+                info: currentWeather?.wind?.gust.toString() ?? '',
+              ),
+            ],
+          ),
+          const Spacer(),
+        ],
       ),
     );
   }

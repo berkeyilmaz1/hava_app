@@ -37,7 +37,7 @@ mixin SplashViewMixin on State<SplashView>, BaseState<SplashView> {
   void navigateHomeView() {
     Navigator.push(
       context,
-      MaterialPageRoute(
+      MaterialPageRoute<void>(
         builder: (context) => HomeView(weatherCubit: weatherCubit),
       ),
     );
