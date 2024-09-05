@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hava_app/product/init/service/model/weather_model.dart';
+import 'package:hava_app/product/utils/constants/text_styles.dart';
 import 'package:hava_app/product/utils/widget_sizes.dart';
+
 /// InformationCard is a widget that displays the information of the weather.
 final class InformationCard extends StatelessWidget {
   const InformationCard({
@@ -20,11 +22,17 @@ final class InformationCard extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(info),
+          Text(
+            info,
+            style: TextStyles.textStyleM,
+          ),
           const SizedBox(
             height: WidgetSizes.spacingS,
           ),
-          Text(description),
+          Text(
+            description,
+            style: TextStyles.textStyleM,
+          ),
         ],
       ),
     );

@@ -6,9 +6,11 @@ import 'package:hava_app/product/init/localization/main_localization.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  runApp(MainLocalization(
-    child: const MyApp(),
-  ));
+  runApp(
+    MainLocalization(
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -17,6 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'NunitoSans',
+        cardTheme: const CardTheme(
+          elevation: 8,
+        ),
+      ),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,

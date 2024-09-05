@@ -1,6 +1,7 @@
 part of '../home_view.dart';
 
-/// SunEventsInfoCard is a widget that displays the sunrise and sunset information of the weather.
+/// SunEventsInfoCard is a widget that displays the sunrise and
+///  sunset information of the weather.
 final class SunEventsInfoCard extends StatelessWidget {
   const SunEventsInfoCard({super.key, this.currentWeather});
   final WeatherModel? currentWeather;
@@ -12,28 +13,38 @@ final class SunEventsInfoCard extends StatelessWidget {
         child: LottieBuilder.asset(LottieConstants.loading),
       );
     }
-    return Padding(
-      padding: const PagePadding.all(),
-      child: Card(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            InformationCard(
-              currentWeather: currentWeather,
-              description: LocaleKeys.sunEvents_sunrise.tr(),
-              info: Formatters.convertUnixToDate(
-                currentWeather!.sys!.sunrise ?? 0,
-              ),
+    return InfoGradientContainer(
+      child: Column(
+        children: [
+          Padding(
+            padding: const PagePadding.allVeryLow(),
+            child: Text(
+              LocaleKeys.app_sunEvents.tr(),
+              style: TextStyles.textStyleM,
             ),
-            InformationCard(
-              currentWeather: currentWeather,
-              description: LocaleKeys.sunEvents_sunset.tr(),
-              info: Formatters.convertUnixToDate(
-                currentWeather!.sys!.sunset ?? 0,
+          ),
+          const Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              InformationCard(
+                currentWeather: currentWeather,
+                description: LocaleKeys.sunEvents_sunrise.tr(),
+                info: Formatters.convertUnixToDate(
+                  currentWeather?.sys?.sunrise ?? 0,
+                ),
               ),
-            ),
-          ],
-        ),
+              InformationCard(
+                currentWeather: currentWeather,
+                description: LocaleKeys.sunEvents_sunset.tr(),
+                info: Formatters.convertUnixToDate(
+                  currentWeather?.sys?.sunset ?? 0,
+                ),
+              ),
+            ],
+          ),
+          const Spacer(),
+        ],
       ),
     );
   }

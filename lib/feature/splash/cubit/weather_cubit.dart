@@ -35,6 +35,7 @@ final class WeatherCubit extends Cubit<WeatherState>
     LocationPermission permission;
 
     // Test if location services are enabled.
+    //TODO SHOW LOCATION SERVICES
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) return Future.error('Location services are disabled.');
 

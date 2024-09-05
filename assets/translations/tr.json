@@ -1,7 +1,10 @@
 {
     "app":{
         "celcius": "{} °C",
-        "percentage": "{} %"
+        "percentage": "{} %",
+        "informations": "Genel Bilgiler",
+        "wind":"Rüzgar",
+        "sunEvents":"Güneş Olayları"
     },
     "weather": {
         "title": "Hava Durumu",
