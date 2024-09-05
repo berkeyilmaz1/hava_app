@@ -1,4 +1,5 @@
 part of '../home_view.dart';
+
 /// SunEventsInfoCard is a widget that displays the sunrise and sunset information of the weather.
 final class SunEventsInfoCard extends StatelessWidget {
   const SunEventsInfoCard({super.key, this.currentWeather});
@@ -7,8 +8,8 @@ final class SunEventsInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (currentWeather == null || currentWeather!.main == null) {
-      return const Center(
-        child: CircularProgressIndicator(),
+      return Center(
+        child: LottieBuilder.asset(LottieConstants.loading),
       );
     }
     return Padding(
