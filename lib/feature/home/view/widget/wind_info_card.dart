@@ -1,4 +1,5 @@
 part of '../home_view.dart';
+
 /// WindInfoCard is a widget that displays the wind information of the weather.
 final class WindInfoCard extends StatelessWidget {
   const WindInfoCard({super.key, this.currentWeather});
@@ -6,8 +7,8 @@ final class WindInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (currentWeather == null || currentWeather!.main == null) {
-      return const Center(
-        child: CircularProgressIndicator(),
+      return Center(
+        child: LottieBuilder.asset(LottieConstants.loading),
       );
     }
     return Padding(

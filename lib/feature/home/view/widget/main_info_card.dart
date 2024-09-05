@@ -8,8 +8,8 @@ final class MainInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (currentWeather == null || currentWeather!.main == null) {
-      return const Center(
-        child: CircularProgressIndicator(),
+      return Center(
+        child: LottieBuilder.asset(LottieConstants.loading),
       );
     }
     return Padding(
