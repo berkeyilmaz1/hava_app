@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:hava_app/feature/home/cubit/weather_cubit.dart';
 import 'package:hava_app/feature/home/view/home_view.dart';
+import 'package:hava_app/feature/splash/cubit/weather_cubit.dart';
 import 'package:hava_app/feature/splash/view/splash_view.dart';
 import 'package:hava_app/product/base/base_state.dart';
 import 'package:hava_app/product/init/service/weather_service.dart';
 
 mixin SplashViewMixin on State<SplashView>, BaseState<SplashView> {
   late final WeatherCubit weatherCubit;
+  final ValueNotifier<bool> loading = ValueNotifier(true);
 
   @override
   void initState() {
@@ -25,9 +26,11 @@ mixin SplashViewMixin on State<SplashView>, BaseState<SplashView> {
     final city = await weatherCubit.getCurrentCity();
     final currentWeather = await weatherCubit.fetchCurrentWeather(city);
     if (currentWeather == null) {
+      loading.value = false;
       showError();
       return;
     }
+
     navigateHomeView();
   }
 

@@ -32,6 +32,7 @@ final class WeatherService extends WeatherServiceInterface {
         'lat': city.latitude,
         'lon': city.longitude,
         'appid': 'APIKEY',
+        'units': 'metric',
       },
     );
     return response.data;

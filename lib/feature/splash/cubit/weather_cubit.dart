@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:hava_app/feature/home/cubit/weather_state.dart';
+import 'package:hava_app/feature/splash/cubit/weather_state.dart';
 import 'package:hava_app/product/init/service/model/weather_model.dart';
 import 'package:hava_app/product/init/service/weather_service.dart';
 
