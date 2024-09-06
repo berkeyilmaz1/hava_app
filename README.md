@@ -1,16 +1,45 @@
-# hava_app
 
-A new Flutter project.
+# Weather App
+ 
+**This project is a weather app application developed using Flutter. The app allows users to show current weather datas.** <br>
 
-## Getting Started
+-----------
 
-This project is a starting point for a Flutter application.
+## Features
+* **Current Weather Information:** Shows current weather informations.<br> 
+  
+## The Libraries and Technologies
+* **MVVM (Model-View-ViewModel) Architecture**: MVVM is an architectural pattern where Model represents data and business logic, View represents UI components, and ViewModel acts as an intermediary, facilitating data flow and user interactions in a decoupled manner. <br>
 
-A few resources to get you started if this is your first Flutter project:
+* **Flutter**
+  
+* **Dart**
+  
+* **State** <br>
+  * [Bloc](https://pub.dev/packages/flutter_bloc)<br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* **Network** <br>
+  * [Vexana](https://pub.dev/packages/vexana))<br>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* **Location Service** <br>
+  * [Geolocator](https://pub.dev/packages/geolocator)<br>
+  
+* **Localization** <br>
+  * [Easy Localization](https://pub.dev/packages/easy_localization)<br>
+
+* **Equatable** <br>
+  * [Equatable](https://pub.dev/packages/equatable))<br>
+  
+* **JSON** <br>
+  * [Json Annotation](https://pub.dev/packages/json_annotation)<br>
+
+* **Linter** <br>
+  * [Very Good Analysis](https://pub.dev/packages/very_good_analysis)<br>
+
+## Images from App
+
+ ---
+
+
+
+
